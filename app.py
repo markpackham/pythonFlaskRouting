@@ -9,5 +9,5 @@ def home():
 
 
 @app.route('/ninjas')
-def home():
-    return render_template('index.html',)
+def ninjas():
+    return render_template('index.html',  ninja_turtles = True)

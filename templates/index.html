@@ -8,7 +8,9 @@
 </head>
 <body>
 
-    <img src="{{url_for}}">
+    {% if ninja_turtles  == True %}
+    <img alt="teenage mutant ninja turtles" src="{{ url_for('static', filename='./images/tmnt.png') }}">
+    {% endif %}
 
 </body>
 </html>
