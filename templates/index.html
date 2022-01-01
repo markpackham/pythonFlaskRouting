@@ -8,8 +8,29 @@
 </head>
 <body>
 
-    {% if ninja_turtles  == True %}
+    {% if ninja_turtles %}
     <img alt="teenage mutant ninja turtles" src="{{ url_for('static', filename='./images/tmnt.png') }}">
+    {% endif %}
+
+
+    {% if ninja_turtles == False %}
+
+    {% if color == 'blue' %}
+    <img alt="teenage mutant ninja" src="{{ url_for('static', filename='./images/leonardo.png') }}">
+
+    {% elif color == 'purple' %}
+    <img alt="teenage mutant ninja" src="{{ url_for('static', filename='./images/donatello.png') }}">
+
+    {% elif color == 'orange' %}
+    <img alt="teenage mutant ninja" src="{{ url_for('static', filename='./images/michelangelo.png') }}">
+
+    {% elif color == 'red' %}
+    <img alt="teenage mutant ninja" src="{{ url_for('static', filename='./images/raphael.png') }}">
+
+    {% else %}
+    <img alt="April O'Neil" src="{{ url_for('static', filename='./images/april.png') }}">
+    {% endif %}
+
     {% endif %}
 
 </body>

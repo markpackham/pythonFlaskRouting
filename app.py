@@ -11,3 +11,7 @@ def home():
 @app.route('/ninjas')
 def ninjas():
     return render_template('index.html',  ninja_turtles = True)
+
+@app.route('/ninjas/<ninja_color>')
+def color(ninja_color):
+    return render_template('index.html',  ninja_turtles = False, color = ninja_color)
